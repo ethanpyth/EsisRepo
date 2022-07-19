@@ -7,6 +7,14 @@
     <string name="homeTitle">Home</string>
     <string name="loginTitle">Login</string>
     <string name="profileTitle">Profile</string>
-    <string name="addDocTitle"></string>
+    <string name="addDocTitle">AddDoc</string>
     <string name="workListTitle">Work list</string>
+    <string name="descriptionField">Description</string>
+    <string name="promotionField">Promotion</string>
+    <string name="categoryField">Category</string>
+    <string name="workDate">Work date</string>
+    <string name="addImage">Add image</string>
+    <string name="addWork">Add work</string>
+    <string name="addWorkButton">Add work</string>
+    <string name="addImageButton">Add image</string>
 </resources>

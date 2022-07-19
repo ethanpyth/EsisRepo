@@ -13,37 +13,63 @@
         android:layout_height="match_parent">
 
         <EditText
-            android:id="@+id/"
-            android:layout_marginTop="20dp"
+            android:id="@+id/descriptionTravail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:autofillHints="" />
-
-        <EditText
             android:layout_marginTop="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:hint="@string/descriptionField"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:textColorHint="#757575" />
 
         <EditText
+            android:id="@+id/promotion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:hint="@string/promotionField"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:textColorHint="#757575" />
 
         <EditText
+            android:id="@+id/category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="@string/categoryField"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:textColorHint="#757575" />
+
+        <EditText
+            android:id="@+id/workDateField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="@string/workDate"
+            android:inputType="datetime"
+            android:minHeight="48dp"
+            android:textColorHint="#757575" />
+
+        <Button
+            android:id="@+id/addImage"
+            android:hint="@string/addImageButton"
             android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
         <Button
-            android:layout_marginTop="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-        <Button
+            android:hint="@string/addWorkButton"
+            android:id="@+id/addWork"
             android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
     </LinearLayout>
+
+<!--    <ProgressBar-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height=""-->
 
 </FrameLayout>
