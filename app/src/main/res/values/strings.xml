@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">EsisRepo</string>
+    <string name="submitButton">Submit</string>
+    <string name="cancelButton">Cancel</string>
+    <string name="usernameField">Enter your username</string>
+    <string name="pwdField">Enter your password</string>
+    <string name="homeTitle">Home</string>
+    <string name="loginTitle">Login</string>
+    <string name="profileTitle">Profile</string>
+    <string name="addDocTitle"></string>
+    <string name="workListTitle">Work list</string>
+</resources>
