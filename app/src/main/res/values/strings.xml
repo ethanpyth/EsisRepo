@@ -17,4 +17,10 @@
     <string name="addWork">Add work</string>
     <string name="addWorkButton">Add work</string>
     <string name="addImageButton">Add image</string>
+    <string name="workImage">Work image</string>
+    <string name="settingsItemMenu">Settings</string>
+    <string name="modifyItemMenu">Modify</string>
+    <string name="imageDescription">Image profile</string>
+    <string name="userName">Nom :</string>
+    <string name="userMatricule">Matricule :</string>
 </resources>

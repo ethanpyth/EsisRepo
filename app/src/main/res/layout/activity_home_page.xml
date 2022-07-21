@@ -8,6 +8,13 @@
     android:orientation="vertical"
     android:padding="25dp">
 
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    </ListView>
+
     <Button
         android:id="@+id/addWorkButton"
         android:hint="@string/addWorkButton"

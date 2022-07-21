@@ -14,25 +14,30 @@
         android:theme="@style/Theme.EsisRepo"
         tools:targetApi="31">
         <activity
-            android:name=".WorkListActivity"
-            android:label="@string/workListTitle"
+            android:name=".WorkDetailActivity"
             android:exported="false" />
+        <activity
+            android:name=".WorkListActivity"
+            android:exported="false"
+            android:label="@string/workListTitle"
+            android:parentActivityName=".HomePageActivity" />
         <activity
             android:name=".ProfileActivity"
+            android:exported="false"
             android:label="@string/profileTitle"
-            android:exported="false" />
+            android:parentActivityName=".HomePageActivity" />
         <activity
             android:name=".AddDocActivity"
+            android:exported="false"
             android:label="@string/addDocTitle"
-            android:exported="false" />
+            android:parentActivityName=".HomePageActivity" />
         <activity
             android:name=".LoginActivity"
-            android:label="@string/loginTitle"
-            android:exported="false" />
+            android:exported="false"
+            android:label="@string/loginTitle" />
         <activity
             android:name=".HomePageActivity"
-            android:exported="true"
-            android:label="@string/homeTitle">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -40,4 +45,5 @@
             </intent-filter>
         </activity>
     </application>
+
 </manifest>
