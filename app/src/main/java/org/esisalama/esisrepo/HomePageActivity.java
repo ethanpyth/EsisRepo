@@ -1,19 +1,24 @@
 package org.esisalama.esisrepo;
 
-import android.app.ActionBar;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 
-import androidx.annotation.Nullable;
+import android.os.Bundle;
+import android.view.Menu;
+
+import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.Toast;
+
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Objects;
 
 public class HomePageActivity extends AppCompatActivity {
     private Button addWorkButton;
+    private MenuItem searchItem;
     private Button workDetailButton;
 
     @Override
@@ -27,6 +32,12 @@ public class HomePageActivity extends AppCompatActivity {
         workDetailButtonAction();
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_home, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
     private void initComponents() {
         workDetailButton = findViewById(R.id.workDetailButton);
         addWorkButton = findViewById(R.id.addWorkButton);
@@ -37,6 +48,25 @@ public class HomePageActivity extends AppCompatActivity {
             Intent workDetailIntent = new Intent(this, WorkDetailActivity.class);
             startActivity(workDetailIntent);
         });
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if(item.getItemId() == R.id.searchItem) {
+            Toast.makeText(
+                    this,
+                    "You want to search something.",
+                    Toast.LENGTH_SHORT
+            ).show();
+        } else if(item.getItemId() == R.id.filterItem) {
+            Toast.makeText(
+                    this,
+                    "You want to filter your home.",
+                    Toast.LENGTH_SHORT
+            ).show();
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private void addWorkButtonAction() {

@@ -33,4 +33,6 @@
     <string name="author">"Author : "</string>
     <string name="promotion">"Promotion : "</string>
     <string name="category">"Category : "</string>
+    <string name="searchItem">Search</string>
+    <string name="filterItem">FIlter</string>
 </resources>
