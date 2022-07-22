@@ -23,38 +23,42 @@
     </LinearLayout>
 
     <TextView
-        android:layout_gravity="bottom"
         android:layout_margin="10dp"
         android:id="@+id/workDescription"
         android:layout_height="wrap_content"
-        android:layout_width="match_parent"/>
+        android:layout_width="match_parent"
+        android:text="@string/workDescription"/>
 
     <TextView
         android:layout_margin="10dp"
         android:id="@+id/creationDate"
         android:layout_height="wrap_content"
-        android:layout_width="match_parent"/>
+        android:layout_width="match_parent"
+        android:text="@string/workCreationDate"/>
 
     <TextView
+        android:text="@string/workDate"
         android:layout_margin="10dp"
         android:id="@+id/workDate"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"/>
 
     <TextView
+        android:text="@string/author"
         android:layout_margin="10dp"
         android:id="@+id/author"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"/>
 
     <TextView
+        android:text="@string/promotion"
         android:layout_margin="10dp"
         android:id="@+id/promotion"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"/>
 
     <TextView
-        android:layout_gravity="bottom"
+        android:text="@string/category"
         android:layout_margin="10dp"
         android:id="@+id/category"
         android:layout_height="wrap_content"

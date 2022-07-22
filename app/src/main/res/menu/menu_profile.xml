@@ -4,7 +4,7 @@
 
     <item android:title="@string/settingsItemMenu"
         android:icon="@drawable/ic_baseline_settings_24"
-        app:showAsAction="always"/>
+        app:showAsAction="ifRoom"/>
 
     <item android:title="@string/modifyItemMenu"
         android:icon="@drawable/ic_baseline_create_24"

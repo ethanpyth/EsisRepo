@@ -21,6 +21,16 @@
     <string name="settingsItemMenu">Settings</string>
     <string name="modifyItemMenu">Modify</string>
     <string name="imageDescription">Image profile</string>
-    <string name="userName">Nom :</string>
-    <string name="userMatricule">Matricule :</string>
+    <string name="userName">"Nom : "</string>
+    <string name="userMatricule">"Matricule :""</string>
+    <string name="workDetailTitle">Work Detail</string>
+    <string name="workDetailButton">Work Detail</string>
+    <string name="workDescription">"Description : "</string>
+    <string name="workCreationDate">"Date création : "</string>
+    <string name="item">Share</string>
+    <string name="shareItem">Share</string>
+    <string name="deleteItem">Delete</string>
+    <string name="author">"Author : "</string>
+    <string name="promotion">"Promotion : "</string>
+    <string name="category">"Category : "</string>
 </resources>

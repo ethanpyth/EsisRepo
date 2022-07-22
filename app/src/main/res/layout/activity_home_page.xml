@@ -16,6 +16,12 @@
     </ListView>
 
     <Button
+        android:id="@+id/workDetailButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/workDetailButton"/>
+
+    <Button
         android:id="@+id/addWorkButton"
         android:hint="@string/addWorkButton"
         android:layout_width="match_parent"

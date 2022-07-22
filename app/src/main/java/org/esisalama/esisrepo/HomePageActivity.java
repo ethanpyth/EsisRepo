@@ -14,6 +14,7 @@ import java.util.Objects;
 
 public class HomePageActivity extends AppCompatActivity {
     private Button addWorkButton;
+    private Button workDetailButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,10 +24,19 @@ public class HomePageActivity extends AppCompatActivity {
         changeActivity(setSession());
         initComponents();
         addWorkButtonAction();
+        workDetailButtonAction();
     }
 
     private void initComponents() {
+        workDetailButton = findViewById(R.id.workDetailButton);
         addWorkButton = findViewById(R.id.addWorkButton);
+    }
+
+    private void workDetailButtonAction() {
+        workDetailButton.setOnClickListener(v -> {
+            Intent workDetailIntent = new Intent(this, WorkDetailActivity.class);
+            startActivity(workDetailIntent);
+        });
     }
 
     private void addWorkButtonAction() {
