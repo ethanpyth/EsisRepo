@@ -17,9 +17,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.Objects;
 
 public class HomePageActivity extends AppCompatActivity {
-    private Button addWorkButton;
-    private MenuItem searchItem;
-    private Button workDetailButton;
+//    private Button addWorkButton;
+    private Button profileButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,28 +27,42 @@ public class HomePageActivity extends AppCompatActivity {
         Objects.requireNonNull(getSupportActionBar()).setTitle("Home");
         changeActivity(setSession());
         initComponents();
-        addWorkButtonAction();
-        workDetailButtonAction();
+        profileButtonAction();
+//        addWorkButtonAction();
+//        workDetailButtonAction();
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction()
+                    .setReorderingAllowed(true)
+                    .add(R.id.fragment_container_view, ItemFragment.class, null)
+                    .commit();
+        }
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+    public boolean onCreateOptionsMenu(@NonNull Menu menu) {
         getMenuInflater().inflate(R.menu.menu_home, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
     private void initComponents() {
-        workDetailButton = findViewById(R.id.workDetailButton);
-        addWorkButton = findViewById(R.id.addWorkButton);
+        profileButton = findViewById(R.id.profileButton);
+//        workDetailButton = findViewById(R.id.workDetailButton);
+//        addWorkButton = findViewById(R.id.addWorkButton);
     }
 
-    private void workDetailButtonAction() {
-        workDetailButton.setOnClickListener(v -> {
-            Intent workDetailIntent = new Intent(this, WorkDetailActivity.class);
-            startActivity(workDetailIntent);
+//    private void workDetailButtonAction() {
+//        workDetailButton.setOnClickListener(v -> {
+//            Intent workDetailIntent = new Intent(this, WorkDetailActivity.class);
+//            startActivity(workDetailIntent);
+//        });
+//    }
+
+    private void profileButtonAction(){
+        profileButton.setOnClickListener(v -> {
+            Intent profileIntent = new Intent(this, ProfileActivity.class);
+            startActivity(profileIntent);
         });
     }
-
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
@@ -69,14 +82,14 @@ public class HomePageActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private void addWorkButtonAction() {
-        addWorkButton.setOnClickListener(
-            v -> {
-                Intent addWorkIntent = new Intent(this, AddDocActivity.class);
-                startActivity(addWorkIntent);
-            }
-        );
-    }
+//    private void addWorkButtonAction() {
+//        addWorkButton.setOnClickListener(
+//            v -> {
+//                Intent addWorkIntent = new Intent(this, AddDocActivity.class);
+//                startActivity(addWorkIntent);
+//            }
+//        );
+//    }
 
     private boolean setSession(){
         SharedPreferences preferences = getSharedPreferences("session", 0);

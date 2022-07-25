@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ModifyProfileActivity"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <EditText
+        android:id="@+id/oldPWDField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:autofillHints=""
+        android:hint="@string/oldPWD"
+        android:minHeight="48dp"
+        android:textColorHint="#757575"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/newPWDField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:autofillHints=""
+        android:hint="@string/newPWD"
+        android:minHeight="48dp"
+        android:textColorHint="#757575"
+        android:inputType="textPassword"/>
+
+    <EditText
+        android:id="@+id/confirmNewPWDField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:autofillHints=""
+        android:hint="@string/confirmNewPWD"
+        android:minHeight="48dp"
+        android:textColorHint="#757575"
+        android:inputType="textPassword"/>
+
+    <Button
+        android:layout_gravity="bottom"
+        android:hint="@string/modifyButton"
+        android:id="@+id/modifyButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

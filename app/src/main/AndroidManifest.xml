@@ -14,10 +14,14 @@
         android:theme="@style/Theme.EsisRepo"
         tools:targetApi="31">
         <activity
-            android:parentActivityName=".HomePageActivity"
+            android:parentActivityName=".ProfileActivity"
+            android:name=".ModifyProfileActivity"
+            android:exported="false" />
+        <activity
             android:name=".WorkDetailActivity"
             android:exported="false"
-            android:label="@string/workDetailTitle"/>
+            android:label="@string/workDetailTitle"
+            android:parentActivityName=".HomePageActivity" />
         <activity
             android:name=".WorkListActivity"
             android:exported="false"

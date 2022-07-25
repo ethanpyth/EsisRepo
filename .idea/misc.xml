@@ -3,12 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/add_work_button.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.153" />
         <entry key="app/src/main/res/layout/activity_add_doc.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_home_page.xml" value="0.24" />
         <entry key="app/src/main/res/layout/activity_login_page.xml" value="0.14855072463768115" />
+        <entry key="app/src/main/res/layout/activity_modify_profile.xml" value="0.13677536231884058" />
         <entry key="app/src/main/res/layout/activity_profile.xml" value="0.14855072463768115" />
         <entry key="app/src/main/res/layout/activity_work_detail.xml" value="0.14855072463768115" />
         <entry key="app/src/main/res/layout/activity_work_list.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_item.xml" value="0.13677536231884058" />
+        <entry key="app/src/main/res/layout/fragment_item_list.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.13677536231884058" />
         <entry key="app/src/main/res/layout/list_item_layout.xml" value="0.14855072463768115" />
         <entry key="app/src/main/res/menu/menu_home.xml" value="0.21770833333333334" />
         <entry key="app/src/main/res/menu/menu_profile.xml" value="0.21666666666666667" />

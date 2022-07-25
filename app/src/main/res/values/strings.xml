@@ -35,4 +35,11 @@
     <string name="category">"Category : "</string>
     <string name="searchItem">Search</string>
     <string name="filterItem">FIlter</string>
+    <string name="allWorkList">All</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="modifyButton">Modify</string>
+    <string name="confirmNewPWD">Confirm new password</string>
+    <string name="newPWD">New password</string>
+    <string name="oldPWD">Old password</string>
 </resources>
