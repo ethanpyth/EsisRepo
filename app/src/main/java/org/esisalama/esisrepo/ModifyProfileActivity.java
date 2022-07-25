@@ -39,8 +39,8 @@ public class ModifyProfileActivity extends AppCompatActivity {
                     Toast.makeText(
                                     this,
                                     "Nouveau mot de passe valider",
-                                    Toast.LENGTH_SHORT)
-                            .show();
+                                    Toast.LENGTH_SHORT
+                            ).show();
                     return true;
                 } else {
                     Toast.makeText(
@@ -54,16 +54,16 @@ public class ModifyProfileActivity extends AppCompatActivity {
                                 this,
                                 "Le mot de passe du dernier champ ne correspond pas au mot de passe du " +
                                         "deuxième champ",
-                                Toast.LENGTH_SHORT)
-                        .show();
+                                Toast.LENGTH_SHORT
+                        ).show();
                 return false;
             }
         } else {
             Toast.makeText(
                             this,
                             "Votre ancien mot de passe n'est pas valide",
-                            Toast.LENGTH_SHORT)
-                    .show();
+                            Toast.LENGTH_SHORT
+                    ).show();
         }
         return false;
     }

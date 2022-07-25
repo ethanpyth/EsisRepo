@@ -5,7 +5,6 @@ import android.content.SharedPreferences;
 
 import android.os.Bundle;
 import android.view.Menu;
-
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.Toast;
@@ -17,7 +16,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.Objects;
 
 public class HomePageActivity extends AppCompatActivity {
-//    private Button addWorkButton;
+    private Button allButton;
+    private Menu menu;
     private Button profileButton;
 
     @Override
@@ -27,40 +27,48 @@ public class HomePageActivity extends AppCompatActivity {
         Objects.requireNonNull(getSupportActionBar()).setTitle("Home");
         changeActivity(setSession());
         initComponents();
-        profileButtonAction();
-//        addWorkButtonAction();
-//        workDetailButtonAction();
-        if (savedInstanceState == null) {
+        profileButtonAction(savedInstanceState);
+        allButtonAction(savedInstanceState);
+        if (savedInstanceState == null){
             getSupportFragmentManager().beginTransaction()
                     .setReorderingAllowed(true)
-                    .add(R.id.fragment_container_view, ItemFragment.class, null)
+                    .replace(R.id.fragment_container_view, ItemFragment.class, null)
                     .commit();
         }
     }
 
     @Override
     public boolean onCreateOptionsMenu(@NonNull Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_home, menu);
+        this.menu = menu;
         return super.onCreateOptionsMenu(menu);
     }
 
     private void initComponents() {
+        allButton = findViewById(R.id.allButton);
         profileButton = findViewById(R.id.profileButton);
-//        workDetailButton = findViewById(R.id.workDetailButton);
-//        addWorkButton = findViewById(R.id.addWorkButton);
     }
 
-//    private void workDetailButtonAction() {
-//        workDetailButton.setOnClickListener(v -> {
-//            Intent workDetailIntent = new Intent(this, WorkDetailActivity.class);
-//            startActivity(workDetailIntent);
-//        });
-//    }
-
-    private void profileButtonAction(){
+    private void profileButtonAction(Bundle savedInstanceState){
         profileButton.setOnClickListener(v -> {
-            Intent profileIntent = new Intent(this, ProfileActivity.class);
-            startActivity(profileIntent);
+            if(savedInstanceState == null){
+                getSupportFragmentManager().beginTransaction()
+                        .setReorderingAllowed(true)
+                        .replace(R.id.fragment_container_view, ProfileFragment.class, null)
+                        .commit();
+            }
+            getMenuInflater().inflate(R.menu.menu_profile, menu);
+        });
+    }
+
+    private void allButtonAction(Bundle savedInstanceState){
+        allButton.setOnClickListener(v -> {
+            if (savedInstanceState == null) {
+                getSupportFragmentManager().beginTransaction()
+                        .setReorderingAllowed(true)
+                        .replace(R.id.fragment_container_view, ItemFragment.class, null)
+                        .commit();
+            }
+            getMenuInflater().inflate(R.menu.menu_home, menu);
         });
     }
 
@@ -82,18 +90,8 @@ public class HomePageActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-//    private void addWorkButtonAction() {
-//        addWorkButton.setOnClickListener(
-//            v -> {
-//                Intent addWorkIntent = new Intent(this, AddDocActivity.class);
-//                startActivity(addWorkIntent);
-//            }
-//        );
-//    }
-
     private boolean setSession(){
         SharedPreferences preferences = getSharedPreferences("session", 0);
-
         return preferences.getBoolean("session_active", false);
     }
 

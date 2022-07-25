@@ -35,6 +35,7 @@
         android:backgroundTint="@color/purple_500">
 
         <Button
+            android:id="@+id/allButton"
             android:layout_width="205dp"
             android:layout_height="wrap_content"
             android:hint="@string/allWorkList"
