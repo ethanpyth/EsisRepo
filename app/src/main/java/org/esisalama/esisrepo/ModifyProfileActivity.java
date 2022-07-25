@@ -10,9 +10,9 @@ import android.widget.Toast;
 
 public class ModifyProfileActivity extends AppCompatActivity {
     private Button modifyButton;
-    private EditText oldPWD;
-    private EditText newPWD;
-    private EditText confirmNewPWD;
+    private EditText oldPWDField;
+    private EditText newPWDField;
+    private EditText confirmNewPWDField;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,9 +24,9 @@ public class ModifyProfileActivity extends AppCompatActivity {
 
     private void initComponents(){
         modifyButton = findViewById(R.id.modifyButton);
-        oldPWD = findViewById(R.id.oldPWDField);
-        newPWD = findViewById(R.id.newPWDField);
-        confirmNewPWD = findViewById(R.id.confirmNewPWDField);
+        oldPWDField = findViewById(R.id.oldPWDField);
+        newPWDField = findViewById(R.id.newPWDField);
+        confirmNewPWDField = findViewById(R.id.confirmNewPWDField);
     }
 
     private boolean validatorNewPWD(EditText oldPWDField, EditText newPWDField, EditText confirmNewPWDField){
@@ -70,7 +70,7 @@ public class ModifyProfileActivity extends AppCompatActivity {
 
     private void modifyButtonAction(){
         modifyButton.setOnClickListener(v -> {
-            boolean bool = validatorNewPWD(oldPWD, newPWD, confirmNewPWD);
+            boolean bool = validatorNewPWD(oldPWDField, newPWDField, confirmNewPWDField);
             if (bool){
                 Intent homePageIntent = new Intent(this, HomePageActivity.class);
                 startActivity(homePageIntent);
