@@ -5,12 +5,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileActivity"
-    android:padding="25dp">
+    tools:context=".ProfileActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/menu_profile"
+        app:title="@string/profileTitle"/>
 
     <ImageView
         android:layout_gravity="center_horizontal"
         android:id="@+id/imageView2"
+        android:layout_margin="15dp"
         android:layout_width="250dp"
         android:layout_height="250dp"
         app:srcCompat="@drawable/pexels_mohamed_abdelghaffar_771742"

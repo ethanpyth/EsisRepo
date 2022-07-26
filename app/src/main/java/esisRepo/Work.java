@@ -3,6 +3,16 @@ package esisRepo;
 import java.util.Date;
 
 public class Work {
+    private Category category;
+    private Date creationDate;
+    private String promotion;
+    private State state;
+    private User user;
+    private int id;
+    private String imageURL;
+    private String description;
+    private String workDate;
+
     public String getImageURL() {
         return imageURL;
     }
@@ -35,11 +45,6 @@ public class Work {
         this.id = id;
     }
 
-    private int id;
-    private String imageURL;
-    private String description;
-    private String workDate;
-
     public Date getCreationDate() {
         return creationDate;
     }
@@ -64,10 +69,6 @@ public class Work {
         this.state = state;
     }
 
-    private Date creationDate;
-    private String promotion;
-    private State state;
-
     public User getUser() {
         return user;
     }
@@ -76,8 +77,6 @@ public class Work {
         this.user = user;
     }
 
-    private User user;
-
     public Category getCategory() {
         return category;
     }
@@ -85,6 +84,4 @@ public class Work {
     public void setCategory(Category category) {
         this.category = category;
     }
-
-    private Category category;
 }

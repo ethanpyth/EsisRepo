@@ -16,19 +16,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.Objects;
 
 public class HomePageActivity extends AppCompatActivity {
+    private Button addWorkButton;
     private Button allButton;
-    private Menu menu;
     private Button profileButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
-        Objects.requireNonNull(getSupportActionBar()).setTitle("Home");
         changeActivity(setSession());
         initComponents();
         profileButtonAction(savedInstanceState);
         allButtonAction(savedInstanceState);
+        addWorkButtonAction();
         if (savedInstanceState == null){
             getSupportFragmentManager().beginTransaction()
                     .setReorderingAllowed(true)
@@ -39,11 +39,12 @@ public class HomePageActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(@NonNull Menu menu) {
-        this.menu = menu;
+        getMenuInflater().inflate(R.menu.menu_home, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
     private void initComponents() {
+        addWorkButton = findViewById(R.id.addWork);
         allButton = findViewById(R.id.allButton);
         profileButton = findViewById(R.id.profileButton);
     }
@@ -56,7 +57,13 @@ public class HomePageActivity extends AppCompatActivity {
                         .replace(R.id.fragment_container_view, ProfileFragment.class, null)
                         .commit();
             }
-            getMenuInflater().inflate(R.menu.menu_profile, menu);
+        });
+    }
+
+    private void addWorkButtonAction(){
+        addWorkButton.setOnClickListener(v -> {
+            Intent addWorkIntent = new Intent(this, AddDocActivity.class);
+            startActivity(addWorkIntent);
         });
     }
 
@@ -68,7 +75,6 @@ public class HomePageActivity extends AppCompatActivity {
                         .replace(R.id.fragment_container_view, ItemFragment.class, null)
                         .commit();
             }
-            getMenuInflater().inflate(R.menu.menu_home, menu);
         });
     }
 

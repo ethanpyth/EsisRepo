@@ -6,8 +6,8 @@
     <string name="pwdField">Enter your password</string>
     <string name="homeTitle">Home</string>
     <string name="loginTitle">Login</string>
-    <string name="profileTitle">Profile</string>
-    <string name="addDocTitle">AddDoc</string>
+    <string name="profileTitle">User Profile</string>
+    <string name="addDocTitle">Add New Document</string>
     <string name="workListTitle">Work list</string>
     <string name="descriptionField">Description</string>
     <string name="promotionField">Promotion</string>
@@ -42,4 +42,5 @@
     <string name="confirmNewPWD">Confirm new password</string>
     <string name="newPWD">New password</string>
     <string name="oldPWD">Old password</string>
+    <string name="goBackButton">Go Back</string>
 </resources>
