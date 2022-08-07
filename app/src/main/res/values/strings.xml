@@ -43,4 +43,5 @@
     <string name="newPWD">New password</string>
     <string name="oldPWD">Old password</string>
     <string name="goBackButton">Go Back</string>
+    <string name="idField">Enter the id</string>
 </resources>

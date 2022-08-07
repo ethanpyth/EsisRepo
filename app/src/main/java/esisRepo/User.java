@@ -12,6 +12,13 @@ public class User {
     private Date creationDate;
     private String imageProfileURL;
 
+    public User(){}
+
+    public User(String name, Integer id){
+        this.name = name;
+        this.id = id;
+    }
+
     public int getId() {
         return id;
     }
