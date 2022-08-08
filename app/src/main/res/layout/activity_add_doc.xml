@@ -25,13 +25,37 @@
         </LinearLayout>
 
 
+<!--        <EditText-->
+<!--            android:id="@+id/id"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:layout_marginHorizontal="15dp"-->
+<!--            android:hint="id"-->
+<!--            android:inputType="number"-->
+<!--            android:minHeight="48dp"-->
+<!--            android:textColorHint="#757575"-->
+<!--            android:autofillHints="" />-->
+
         <EditText
-            android:id="@+id/descriptionTravail"
+            android:id="@+id/mat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_marginHorizontal="15dp"
-            android:hint="@string/descriptionField"
+            android:hint="matricule"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:textColorHint="#757575"
+            android:autofillHints="" />
+
+        <EditText
+            android:id="@+id/nom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="15dp"
+            android:hint="nom"
             android:inputType="text"
             android:minHeight="48dp"
             android:textColorHint="#757575"
@@ -43,43 +67,19 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_marginHorizontal="15dp"
-            android:hint="@string/promotionField"
-            android:inputType="text"
-            android:minHeight="48dp"
-            android:textColorHint="#757575"
-            android:autofillHints="" />
-
-        <EditText
-            android:id="@+id/category"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginHorizontal="15dp"
-            android:hint="@string/categoryField"
-            android:inputType="text"
-            android:minHeight="48dp"
-            android:textColorHint="#757575"
-            android:autofillHints="" />
-
-        <EditText
-            android:id="@+id/workDateField"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginHorizontal="15dp"
-            android:hint="@string/workDate"
+            android:hint="Promotion"
             android:inputType="datetime"
             android:minHeight="48dp"
             android:textColorHint="#757575"
             android:autofillHints="" />
 
-        <Button
-            android:id="@+id/addImage"
-            android:hint="@string/addImageButton"
-            android:layout_marginTop="20dp"
-            android:layout_marginHorizontal="15dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+<!--        <Button-->
+<!--            android:id="@+id/addImage"-->
+<!--            android:hint="@string/addImageButton"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:layout_marginHorizontal="15dp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"/>-->
 
         <Button
             android:hint="@string/addWorkButton"
@@ -88,6 +88,12 @@
             android:layout_marginHorizontal="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/listUsers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/idList"/>
 
     </LinearLayout>
 

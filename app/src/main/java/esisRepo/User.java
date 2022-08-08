@@ -1,22 +1,31 @@
 package esisRepo;
 
+import androidx.room.Entity;
+import androidx.room.Ignore;
+import androidx.room.PrimaryKey;
+
 import java.util.Date;
 
+@Entity
 public class User {
+    @PrimaryKey(autoGenerate = true)
     private int id;
     private String name;
     private String matricule;
     private String pwd;
     private String password;
     private String role;
-    private Date creationDate;
+    private String creationDate;
     private String imageProfileURL;
 
+    @Ignore
     public User(){}
 
-    public User(String name, Integer id){
+    public User(String name, String matricule, String password){
         this.name = name;
         this.id = id;
+        this.matricule = matricule;
+        this.password = password;
     }
 
     public int getId() {
@@ -67,11 +76,11 @@ public class User {
         this.role = role;
     }
 
-    public Date getCreationDate() {
+    public String getCreationDate() {
         return creationDate;
     }
 
-    public void setCreationDate(Date creationDate) {
+    public void setCreationDate(String creationDate) {
         this.creationDate = creationDate;
     }
 

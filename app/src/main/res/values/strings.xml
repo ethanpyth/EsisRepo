@@ -44,4 +44,5 @@
     <string name="oldPWD">Old password</string>
     <string name="goBackButton">Go Back</string>
     <string name="idField">Enter the id</string>
+    <string name="idList">Liste des étudiant</string>
 </resources>

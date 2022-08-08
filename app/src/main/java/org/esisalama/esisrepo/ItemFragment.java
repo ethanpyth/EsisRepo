@@ -3,14 +3,19 @@ package org.esisalama.esisrepo;
 import android.content.Context;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import org.esisalama.esisrepo.placeholder.PlaceholderContent;
 
@@ -48,6 +53,29 @@ public class ItemFragment extends Fragment {
         if (getArguments() != null) {
             mColumnCount = getArguments().getInt(ARG_COLUMN_COUNT);
         }
+    }
+
+    @Override
+    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if(item.getItemId() == R.id.searchItem) {
+//            Toast.makeText(
+//                    HomePageActivity.class,
+//                    "You want to search something.",
+//                    Toast.LENGTH_SHORT
+//            ).show();
+        } else if(item.getItemId() == R.id.filterItem) {
+//            Toast.makeText(
+//                    HomePageActivity.class,
+//                    "You want to filter your home.",
+//                    Toast.LENGTH_SHORT
+//            ).show();
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override

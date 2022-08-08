@@ -10,8 +10,7 @@
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:menu="@menu/menu_profile"
-        app:title="@string/profileTitle"/>
+        app:menu="@menu/menu_profile"/>
 
     <ImageView
         android:layout_gravity="center_horizontal"

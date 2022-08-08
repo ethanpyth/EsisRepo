@@ -1,6 +1,11 @@
 package esisRepo;
 
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity
 public class State {
+    @PrimaryKey
     private int id;
 
     public int getId() {

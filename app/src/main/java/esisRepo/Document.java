@@ -1,8 +1,18 @@
 package esisRepo;
 
+import androidx.room.Embedded;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+import androidx.room.Relation;
+
+@Entity
 public class Document {
+    @PrimaryKey(autoGenerate = true)
     private int id;
+
     private String imageURL;
+
+    @Relation(entity = Work.class, parentColumn = "workId", entityColumn = "id")
     private Work work;
 
     public int getId() {

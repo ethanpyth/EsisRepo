@@ -1,13 +1,25 @@
 package esisRepo;
 
+import androidx.room.Embedded;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+import androidx.room.Relation;
+
 import java.util.Date;
 
+@Entity
 public class Work {
+//    @Relation(entity = Category.class, parentColumn = "categoryId", entityColumn = "id")
     private Category category;
-    private Date creationDate;
+    private String creationDate;
     private String promotion;
+
+//    @Relation(entity = Category.class, parentColumn = "stateId", entityColumn = "id")
     private State state;
+
+//    @Relation(entity = Category.class, parentColumn = "userId", entityColumn = "id")
     private User user;
+//    @PrimaryKey(autoGenerate = true)
     private int id;
     private String imageURL;
     private String description;
@@ -29,11 +41,11 @@ public class Work {
         this.description = description;
     }
 
-    public String getDate() {
+    public String getWorkDate() {
         return workDate;
     }
 
-    public void setDate(String date) {
+    public void setWorkDate(String date) {
         this.workDate = date;
     }
 
@@ -45,11 +57,11 @@ public class Work {
         this.id = id;
     }
 
-    public Date getCreationDate() {
+    public String getCreationDate() {
         return creationDate;
     }
 
-    public void setCreationDate(Date creationDate) {
+    public void setCreationDate(String creationDate) {
         this.creationDate = creationDate;
     }
 

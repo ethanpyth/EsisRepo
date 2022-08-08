@@ -37,6 +37,7 @@ public class HomePageActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+//        Objects.requireNonNull(getSupportActionBar()).setTitle("Home");
         setContentView(R.layout.activity_home_page);
         changeActivity(setSession());
         initComponents();
@@ -132,18 +133,9 @@ public class HomePageActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if(item.getItemId() == R.id.searchItem) {
-            Toast.makeText(
-                    this,
-                    "You want to search something.",
-                    Toast.LENGTH_SHORT
-            ).show();
-        } else if(item.getItemId() == R.id.filterItem) {
-            Toast.makeText(
-                    this,
-                    "You want to filter your home.",
-                    Toast.LENGTH_SHORT
-            ).show();
+        if(R.id.modifyProfile == item.getItemId()){
+            Intent modifyProfileIntent = new Intent(this, ModifyProfileActivity.class);
+            startActivity(modifyProfileIntent);
         }
         return super.onOptionsItemSelected(item);
     }
