@@ -42,12 +42,11 @@
         android:id="@+id/addWork"
         android:layout_width="50dp"
         android:layout_height="50dp"
-
-
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="75dp"
         android:contentDescription="@string/addWorkButton"
-        android:tint="@color/white"
+        android:layout_gravity="end|bottom"
+        android:backgroundTint="@color/white"
         android:src="@drawable/ic_baseline_add_24" />
 
 </FrameLayout>

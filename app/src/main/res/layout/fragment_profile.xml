@@ -39,22 +39,4 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dp"/>
 
-    <EditText
-        android:id="@+id/idField"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/idField"
-        android:inputType="number"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="10dp"
-        android:autofillHints="" />
-
-    <Button
-        android:id="@+id/submit_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/submitButton"
-        android:layout_marginTop="25dp"
-        android:layout_marginHorizontal="20dp"/>
-
 </LinearLayout>

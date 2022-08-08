@@ -15,6 +15,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import java.util.Objects;
 
 import esisRepo.User;
@@ -26,13 +28,11 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class HomePageActivity extends AppCompatActivity {
-//    private Button addWorkButton;
+    private FloatingActionButton addWorkButton;
     private Button allButton;
     private Button profileButton;
-    private EditText idField;
     private TextView nameText;
     private TextView matriculeText;
-    private Button submitButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,8 +42,7 @@ public class HomePageActivity extends AppCompatActivity {
         initComponents();
         profileButtonAction(savedInstanceState);
         allButtonAction(savedInstanceState);
-//        addWorkButtonAction();
-        submitButton();
+        addWorkButtonAction();
         if (savedInstanceState == null){
             getSupportFragmentManager().beginTransaction()
                     .setReorderingAllowed(true)
@@ -53,7 +52,7 @@ public class HomePageActivity extends AppCompatActivity {
     }
 
     private void getRequest(String id){
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("https://api.github.com").addConverterFactory(GsonConverterFactory.create()).build();
+        Retrofit retrofit = new Retrofit.Builder().baseUrl("https://api.github.com/").addConverterFactory(GsonConverterFactory.create()).build();
         UserService userService = retrofit.create(UserService.class);
 
         Call<User> callback = userService.getUser(id);
@@ -88,21 +87,6 @@ public class HomePageActivity extends AppCompatActivity {
         });
     }
 
-    private void submitButton(){
-        submitButton.setOnClickListener(v -> {
-            String id = idField.getText().toString();
-            if (id.isEmpty()){
-                Toast.makeText(
-                        this,
-                        "le champ de saisi ne doit pas etre null",
-                        Toast.LENGTH_SHORT
-                ).show();
-            }else{
-                getRequest(id);
-            }
-        });
-    }
-
     @Override
     public boolean onCreateOptionsMenu(@NonNull Menu menu) {
         getMenuInflater().inflate(R.menu.menu_home, menu);
@@ -110,13 +94,11 @@ public class HomePageActivity extends AppCompatActivity {
     }
 
     private void initComponents() {
-//        addWorkButton = findViewById(R.id.addWork);
+        addWorkButton = findViewById(R.id.addWork);
         allButton = findViewById(R.id.allButton);
         profileButton = findViewById(R.id.profileButton);
         matriculeText = findViewById(R.id.matriculeText);
-        idField = findViewById(R.id.idField);
         nameText = findViewById(R.id.nameText);
-        submitButton = findViewById(R.id.submit_button);
     }
 
     private void profileButtonAction(Bundle savedInstanceState){
@@ -130,12 +112,12 @@ public class HomePageActivity extends AppCompatActivity {
         });
     }
 
-//    private void addWorkButtonAction(){
-//        addWorkButton.setOnClickListener(v -> {
-//            Intent addWorkIntent = new Intent(this, AddDocActivity.class);
-//            startActivity(addWorkIntent);
-//        });
-//    }
+    private void addWorkButtonAction(){
+        addWorkButton.setOnClickListener(v -> {
+            Intent addWorkIntent = new Intent(this, AddDocActivity.class);
+            startActivity(addWorkIntent);
+        });
+    }
 
     private void allButtonAction(Bundle savedInstanceState){
         allButton.setOnClickListener(v -> {
