@@ -55,28 +55,7 @@ public class ItemFragment extends Fragment {
         }
     }
 
-    @Override
-    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
-        super.onCreateOptionsMenu(menu, inflater);
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if(item.getItemId() == R.id.searchItem) {
-//            Toast.makeText(
-//                    HomePageActivity.class,
-//                    "You want to search something.",
-//                    Toast.LENGTH_SHORT
-//            ).show();
-        } else if(item.getItemId() == R.id.filterItem) {
-//            Toast.makeText(
-//                    HomePageActivity.class,
-//                    "You want to filter your home.",
-//                    Toast.LENGTH_SHORT
-//            ).show();
-        }
-        return super.onOptionsItemSelected(item);
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

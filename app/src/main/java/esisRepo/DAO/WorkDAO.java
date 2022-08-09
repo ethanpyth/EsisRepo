@@ -6,7 +6,7 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
 
-import esisRepo.Work;
+import esisRepo.entity.Work;
 
 @Dao
 public interface WorkDAO {

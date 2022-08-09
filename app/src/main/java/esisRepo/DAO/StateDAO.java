@@ -5,7 +5,7 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
 
-import esisRepo.State;
+import esisRepo.entity.State;
 
 public interface StateDAO {
     @Insert

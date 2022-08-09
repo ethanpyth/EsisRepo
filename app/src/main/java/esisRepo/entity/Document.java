@@ -1,6 +1,5 @@
-package esisRepo;
+package esisRepo.entity;
 
-import androidx.room.Embedded;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 import androidx.room.Relation;
@@ -12,8 +11,7 @@ public class Document {
 
     private String imageURL;
 
-    @Relation(entity = Work.class, parentColumn = "workId", entityColumn = "id")
-    private Work work;
+    private int workId;
 
     public int getId() {
         return id;
@@ -31,11 +29,11 @@ public class Document {
         this.imageURL = imageURL;
     }
 
-    public Work getWork() {
-        return work;
+    public int getWorkId() {
+        return workId;
     }
 
-    public void setWork(Work work) {
-        this.work = work;
+    public void setWorkId(int work) {
+        this.workId = work;
     }
 }

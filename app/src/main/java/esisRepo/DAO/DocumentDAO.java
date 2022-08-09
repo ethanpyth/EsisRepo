@@ -6,7 +6,7 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
 
-import esisRepo.Document;
+import esisRepo.entity.Document;
 
 @Dao
 public interface DocumentDAO {

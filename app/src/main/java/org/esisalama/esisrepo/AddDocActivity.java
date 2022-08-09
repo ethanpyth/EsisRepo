@@ -3,9 +3,7 @@ package org.esisalama.esisrepo;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -15,7 +13,7 @@ import java.util.List;
 
 import esisRepo.DAO.UserDAO;
 import esisRepo.Database.AppDatabase;
-import esisRepo.User;
+import esisRepo.entity.User;
 
 public class AddDocActivity extends AppCompatActivity {
     private EditText descriptionField;

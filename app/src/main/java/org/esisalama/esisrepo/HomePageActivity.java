@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,7 +18,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.Objects;
 
-import esisRepo.User;
+import esisRepo.entity.User;
 import esisRepo.UserService;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -37,7 +36,7 @@ public class HomePageActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        Objects.requireNonNull(getSupportActionBar()).setTitle("Home");
+        Objects.requireNonNull(getSupportActionBar());
         setContentView(R.layout.activity_home_page);
         changeActivity(setSession());
         initComponents();

@@ -1,17 +1,5 @@
 package org.esisalama.esisrepo;
 
-import android.content.Context;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-
-import androidx.recyclerview.widget.RecyclerView;
-
-import java.util.List;
-
-import esisRepo.Work;
-
 //public class CustomListAdapter extends BaseAdapter {
 //    private final List<Work> workList;
 //    private LayoutInflater layoutInflater;

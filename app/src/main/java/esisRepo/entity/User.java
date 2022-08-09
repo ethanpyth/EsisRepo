@@ -1,4 +1,4 @@
-package esisRepo;
+package esisRepo.entity;
 
 import androidx.room.Entity;
 import androidx.room.Ignore;
@@ -17,6 +17,16 @@ public class User {
     private String role;
     private String creationDate;
     private String imageProfileURL;
+
+    public int getIdPromotion() {
+        return idPromotion;
+    }
+
+    public void setIdPromotion(int idPromotion) {
+        this.idPromotion = idPromotion;
+    }
+
+    private int idPromotion;
 
     @Ignore
     public User(){}

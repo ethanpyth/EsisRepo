@@ -8,7 +8,7 @@ import androidx.room.Update;
 
 import java.util.List;
 
-import esisRepo.User;
+import esisRepo.entity.User;
 
 @Dao
 public interface UserDAO {

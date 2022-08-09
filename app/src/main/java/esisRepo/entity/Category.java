@@ -1,13 +1,11 @@
-package esisRepo;
+package esisRepo.entity;
 
-import androidx.room.Embedded;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 import androidx.room.Relation;
 
 @Entity
 public class Category {
-    @Relation(entity = Category.class, parentColumn = "categoryId", entityColumn = "id")
     public int getId() {
         return id;
     }
