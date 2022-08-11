@@ -27,6 +27,12 @@ public class Work {
         this.stateId = stateId;
     }
 
+    public Work(String workName, int workId, int userId){
+        this.userId = userId;
+        this.id = workId;
+        this.description = workName;
+    }
+
     public Work(){}
 
     public String getImageURL() {

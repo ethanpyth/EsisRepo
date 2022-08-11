@@ -5,10 +5,11 @@ import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity
 public class User {
-    @PrimaryKey(autoGenerate = true)
+    @PrimaryKey
     private int id;
     private String name;
     private String matricule;
@@ -28,8 +29,12 @@ public class User {
 
     private int idPromotion;
 
-    @Ignore
     public User(){}
+
+    public User(String userName, int userId){
+        this.name = userName;
+        this.id = userId;
+    }
 
     public User(String name, String matricule, String password){
         this.name = name;

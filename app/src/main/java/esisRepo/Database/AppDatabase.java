@@ -4,6 +4,7 @@ import androidx.room.Database;
 import androidx.room.RoomDatabase;
 
 import esisRepo.DAO.UserDAO;
+import esisRepo.DAO.WorkDAO;
 import esisRepo.entity.Category;
 import esisRepo.entity.Document;
 import esisRepo.entity.Promotion;
@@ -20,8 +21,9 @@ import esisRepo.entity.Work;
                 Promotion.class,
                 Work.class
         },
-        version = 2
+        version = 1
 )
 public abstract class AppDatabase extends RoomDatabase {
     public abstract UserDAO userDAO();
+    public abstract WorkDAO workDAO();
 }

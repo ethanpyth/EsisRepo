@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
@@ -13,13 +14,21 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Room;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.io.IOException;
+import java.util.List;
 import java.util.Objects;
 
+import esisRepo.DAO.UserDAO;
+import esisRepo.DAO.WorkDAO;
+import esisRepo.Database.AppDatabase;
+import esisRepo.entity.Repos;
 import esisRepo.entity.User;
 import esisRepo.UserService;
+import esisRepo.entity.Work;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -30,13 +39,11 @@ public class HomePageActivity extends AppCompatActivity {
     private FloatingActionButton addWorkButton;
     private Button allButton;
     private Button profileButton;
-    private TextView nameText;
-    private TextView matriculeText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Objects.requireNonNull(getSupportActionBar());
+//        Objects.requireNonNull(getSupportActionBar());
         setContentView(R.layout.activity_home_page);
         changeActivity(setSession());
         initComponents();
@@ -49,42 +56,8 @@ public class HomePageActivity extends AppCompatActivity {
                     .replace(R.id.fragment_container_view, ItemFragment.class, null)
                     .commit();
         }
-    }
 
-    private void getRequest(String id){
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("https://api.github.com/").addConverterFactory(GsonConverterFactory.create()).build();
-        UserService userService = retrofit.create(UserService.class);
-
-        Call<User> callback = userService.getUser(id);
-        callback.enqueue(new Callback<User>() {
-            @Override
-            public void onResponse(@NonNull Call<User> call, @NonNull Response<User> response) {
-                if (response.isSuccessful()){
-                    User user = response.body();
-                    if (user == null){
-                        Toast.makeText(
-                                HomePageActivity.this,
-                                "Cet utilisateur n'éxiste pas",
-                                Toast.LENGTH_SHORT
-                        ).show();
-                    } else {
-                        nameText.setText(user.getName());
-                        matriculeText.setText(user.getId());
-                    }
-                } else {
-                    Toast.makeText(
-                            HomePageActivity.this,
-                            "",
-                            Toast.LENGTH_SHORT
-                    ).show();
-                }
-            }
-
-            @Override
-            public void onFailure(@NonNull Call<User> call, @NonNull Throwable t) {
-
-            }
-        });
+//        getRequest();
     }
 
     @Override
@@ -97,8 +70,6 @@ public class HomePageActivity extends AppCompatActivity {
         addWorkButton = findViewById(R.id.addWork);
         allButton = findViewById(R.id.allButton);
         profileButton = findViewById(R.id.profileButton);
-        matriculeText = findViewById(R.id.matriculeText);
-        nameText = findViewById(R.id.nameText);
     }
 
     private void profileButtonAction(Bundle savedInstanceState){
